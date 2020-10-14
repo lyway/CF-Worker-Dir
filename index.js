@@ -1,10 +1,10 @@
 /**
- *  自定义网站配置 
+ *  自定义d网站配置 
  */
 const config = {
-  title: "自定义导航",                 //write your website title
-  subtitle: "Cloudflare Workers Dir", //write your website subtitle
-  logo_icon: "sitemap",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
+  title: "小林子.小叶子 简约搜索导航",                 //write your website title
+  subtitle: "含风工作室旗下测试站", //write your website subtitle
+  logo_icon: "globe",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
   hitokoto: true,                     //use hitokoto or not
   search:true,                        //enable search function
   search_engine:[                     //choose search engine which you use
@@ -27,13 +27,13 @@ const config = {
   ],
   selling_ads: true,                  //Selling your domain or not.(turning on may be helpful for selling this domain by showing some ads.)
   sell_info:{
-    domain:"example.com",
+    domain:"xlz.xyz",
     price:500,                        //domain price
     mon_unit:"yen sign",              //monetary unit 
     contact:[                         //how to contact you
       {
         type:"envelope",               //contact type ("weixin","qq","telegram plane","envelope" or "phone")
-        content:"info@example.com"
+        content:"HF@szw8.com"
       }
     ]                        
   },
@@ -43,6 +43,25 @@ const config = {
       icon:"code",
       list:[
         {
+          url:"https://cnbeta.com/",
+          name:"cnBeta.COM",
+          desc:"中文业界资讯站"
+        },
+        {
+          url:"https://tophub.today/",
+          name:"今日热榜",
+          desc:"热门新闻社区聚合"
+        },
+        {
+          url:"http://sports.sina.com.cn/",
+          name:"新浪体育",
+          desc:"传统体育网络媒体"
+        },
+        {
+          url:"http://www.ifeng.com/",
+          name:"凤凰网",
+          desc:"曾经的前沿媒体"
+        },{
           url:"https://oschina.net/",
           name:"开源中国",
           desc:"程序员集散地"
@@ -53,9 +72,9 @@ const config = {
           desc:"程序员集散地"
         },
         {
-          url:"https://csdn.net/",
-          name:"CSDN技术社区",
-          desc:"程序员集散地"
+          url:"https://www.cloudflare.com/zh-cn/",
+          name:"Cloudflare",
+          desc:"免费CDN加速"
         },
         {
           url:"https://github.com/",
@@ -69,24 +88,24 @@ const config = {
       icon:"graduation cap",
       list:[
         {
-          url:"https://w3school.com.cn/",
-          name:"W3school在线教程",
-          desc:"程序员集散地"
+          url:"http://liweis.cn/",
+          name:"含风IT博客",
+          desc:"含风个人博客和库"
         },
         {
-          url:"https://runoob.com/",
-          name:"菜鸟教程",
-          desc:"程序员集散地"
+          url:"http://shejishi.top",
+          name:"设计师导航",
+          desc:"含风的设计师导航网站"
         },
         {
-          url:"https://segmentfault.com/",
-          name:"思否社区",
-          desc:"程序员集散地"
+          url:"https://szw8.com/",
+          name:"含风工作室",
+          desc:"含风的官方网站"
         },
         {
-          url:"https://jianshu.com/",
-          name:"简书",
-          desc:"程序员集散地"
+          url:"https://hf000.com/",
+          name:"含风网址站",
+          desc:"网址导航网站"
         },
       ]
     }
@@ -124,7 +143,7 @@ function getFavicon(url){
  */
 
 function renderIndex(){
-  const footer = el('footer',[],el('div',['class="footer"'],'Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License')));
+  const footer = el('footer',[],el('div',['class="footer"'],'Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; szw8.com ' + el('a',['class="ui label"'],el('i',['class="keyboard icon"'],"") + '含风工作室')));
   return renderHeader() + renderMain() + footer;
 }
 
@@ -214,6 +233,5 @@ function renderHTML(index,seller) {
       });
     </script>
   </body>
-
   </html>`
 }
